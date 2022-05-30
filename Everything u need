@@ -91,3 +91,16 @@ Page.ChipSet({
         C = false
     }
 })
+
+New UI:
+local UI = BooHub.Load({
+     Title = "Hello World!",
+     Style = 3,
+     SizeX = 400,
+     SizeY = 200,
+     Theme = "Light"
+})
+
+Multiple Game Support:
+elseif game.PlaceId == Game ID then
+    local BooHub = GitHub or Pastebin link here
