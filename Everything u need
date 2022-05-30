@@ -102,5 +102,5 @@ local UI = BooHub.Load({
 })
 
 Multiple Game Support:
-elseif game.PlaceId == Game ID then
-    local BooHub = GitHub or Pastebin link here
+elseif game.PlaceId == Game ID here then
+    local BooHub = loadstring(game:HttpGet("GitHub or Pastebin link here"))()
