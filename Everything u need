@@ -1,10 +1,10 @@
 Label: 
-Page.Label({
+Page.Label({ -- adds a small text box
     Text = "example"
 })
 
 Button:
-Page.Button({
+Page.Button({ -- is a button
     Text = "Click Me!",
     Callback = function()
         print("Clicked!")    
@@ -12,7 +12,7 @@ Page.Button({
 })
 
 Toggle:
-Page.Toggle({
+Page.Toggle({ -- toggles a script, on or off
     Text = "On or Off",
     Callback = function(value)
         print(value)
@@ -25,12 +25,12 @@ local Page = UI.New({
     Title = "Main"
 })
 
-local Page2 = UI.New({
+local Page2 = UI.New({ -- change number after page to make new pages ex: Page3, Page4
     Title = "New Page"
 })
 
 Slider:
-Page.Slider({
+Page.Slider({ -- is a slider
     Text = "Slide Me!",
     Callback = function(value)
         print(value)
@@ -41,7 +41,7 @@ Page.Slider({
 })
 
 Dropdown:
-Page.Dropdown({
+Page.Dropdown({ -- gives several options to pick from
     Text = "Choose an option",
     Callback = function(value)
         print(value)
@@ -50,7 +50,7 @@ Page.Dropdown({
 })
 
 TextField:
-Page.TextField({
+Page.TextField({ -- you can type things in this
     Text = "Name",
     Callback = function(value)
         print(value)
@@ -58,7 +58,7 @@ Page.TextField({
 })
 
 DataField:
-Page.DataTable({
+Page.DataTable({ -- basically a dropdown
     Text = "DataTable",
     Callback = function(data)
         table.foreach(data, print)    
@@ -71,7 +71,7 @@ Page.DataTable({
 })
 
 Color Picker:
-Page.ColorPicker({
+Page.ColorPicker({ -- picks a color
     Text = "Choose A Color",
     Default = Color3.fromRGB(0, 255, 0),
     Callback = function(value)
@@ -93,7 +93,7 @@ Page.ChipSet({
 })
 
 New UI:
-local UI = BooHub.Load({
+local UI = BooHub.Load({ -- basically a dropdown
      Title = "Hello World!",
      Style = 3,
      SizeX = 400,
@@ -101,6 +101,6 @@ local UI = BooHub.Load({
      Theme = "Light"
 })
 
-Multiple Game Support:
+Multiple Game Support: -- lets you run a script on several different games on one loadstring
 elseif game.PlaceId == Game ID here then
     local BooHub = loadstring(game:HttpGet("GitHub or Pastebin link here"))()
