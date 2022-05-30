@@ -1,0 +1,93 @@
+Label: 
+Page.Label({
+    Text = "example"
+})
+
+Button:
+Page.Button({
+    Text = "Click Me!",
+    Callback = function()
+        print("Clicked!")    
+    end
+})
+
+Toggle:
+Page.Toggle({
+    Text = "On or Off",
+    Callback = function(value)
+        print(value)
+    end,
+    Enabled = true
+})
+
+Pages:
+local Page = UI.New({
+    Title = "Main"
+})
+
+local Page2 = UI.New({
+    Title = "New Page"
+})
+
+Slider:
+Page.Slider({
+    Text = "Slide Me!",
+    Callback = function(value)
+        print(value)
+    end,
+    Min = 0,
+    Max = 10,
+    Def = 4
+})
+
+Dropdown:
+Page.Dropdown({
+    Text = "Choose an option",
+    Callback = function(value)
+        print(value)
+    end,
+    Options = {"a", "b", "c"}
+})
+
+TextField:
+Page.TextField({
+    Text = "Name",
+    Callback = function(value)
+        print(value)
+    end
+})
+
+DataField:
+Page.DataTable({
+    Text = "DataTable",
+    Callback = function(data)
+        table.foreach(data, print)    
+    end,
+    Options = {
+        A = true,
+        B = true,
+        C = false
+    }
+})
+
+Color Picker:
+Page.ColorPicker({
+    Text = "Choose A Color",
+    Default = Color3.fromRGB(0, 255, 0),
+    Callback = function(value)
+        print(value)
+    end
+})
+
+Chipset:
+Page.ChipSet({
+    Text = "ChipSet",
+    Callback = function(chipset)
+        table.foreach(chipset, print)    
+    end,
+    Options = {
+        A = true,
+        B = true,
+        C = false
+    }
+})
