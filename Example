@@ -1,0 +1,84 @@
+local BooHub = loadstring(game:HttpGet("https://raw.githubusercontent.com/zachisfunny/BooHub/main/BooHub"))()
+
+local UI = BooHub.Load({
+     Title = "Boo Hub",
+     Style = 0,
+     SizeX = 400,
+     SizeY = 300,
+     Theme = "Dark"
+})
+
+local Page = UI.New({
+    Title = "Main"
+})
+
+local Page2 = UI.New({
+    Title = "New Page"
+})
+
+Page.Label({
+    Text = "Made by zach.#6257"
+})
+
+Page.Button({
+    Text = "Click Me!",
+    Callback = function()
+        print("Clicked!")    
+    end
+})
+
+Page.Toggle({
+    Text = "On or Off",
+    Callback = function(value)
+        print(value)
+    end,
+    Enabled = true
+})
+
+Page.Dropdown({
+    Text = "Choose an option",
+    Callback = function(value)
+        print(value)
+    end,
+    Options = {"a", "b", "c"}
+})
+
+Page.TextField({
+    Text = "Name",
+    Callback = function(value)
+        print(value)
+    end
+})
+
+Page.DataTable({
+    Text = "DataTable",
+    Callback = function(data)
+        table.foreach(data, print)    
+    end,
+    Options = {
+        A = true,
+        B = true,
+        C = false
+    }
+})
+
+Page.ColorPicker({
+    Text = "Choose A Color",
+    Default = Color3.fromRGB(0, 255, 0),
+    Callback = function(value)
+        print(value)
+    end
+})
+
+Page.ChipSet({
+    Text = "ChipSet",
+    Callback = function(chipset)
+        table.foreach(chipset, print)    
+    end,
+    Options = {
+        A = true,
+        B = true,
+        C = false
+    }
+})
+
