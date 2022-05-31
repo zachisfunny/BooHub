@@ -104,3 +104,11 @@ local UI = BooHub.Load({ -- basically a dropdown
 Multiple Game Support: -- lets you run a script on several different games on one loadstring
 elseif game.PlaceId == Game ID here then
     local BooHub = loadstring(game:HttpGet("GitHub or Pastebin link here"))()
+
+Anti-AFK:
+wait(3)
+local VirtualUser=game:service'VirtualUser'
+game:service('Players').LocalPlayer.Idled:connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+end)
