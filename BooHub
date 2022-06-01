@@ -1,7 +1,7 @@
 local BooHub = loadstring(game:HttpGet("https://raw.githubusercontent.com/zachisfunny/BooHub/main/Boo"))()
 
 local UI = BooHub.Load({
-     Title = "Boo Hub",
+     Title = "👻 Boo Hub",
      Style = 0,
      SizeX = 400,
      SizeY = 300,
