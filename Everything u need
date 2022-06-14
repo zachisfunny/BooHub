@@ -58,7 +58,7 @@ Page.TextField({ -- you can type things in this
 })
 
 DataField:
-Page.DataTable({ -- basically a dropdown
+Page.DataTable({ -- basically a dropdown but a boolean
     Text = "DataTable",
     Callback = function(data)
         table.foreach(data, print)    
@@ -80,7 +80,7 @@ Page.ColorPicker({ -- picks a color
 })
 
 Chipset:
-Page.ChipSet({
+Page.ChipSet({ -- basically a dropdown but a boolean
     Text = "ChipSet",
     Callback = function(chipset)
         table.foreach(chipset, print)    
@@ -93,12 +93,16 @@ Page.ChipSet({
 })
 
 New UI:
-local UI = BooHub.Load({ -- basically a dropdown
+local UI = BooHub.Load({ -- loads a new ui
      Title = "Hello World!",
      Style = 3,
      SizeX = 400,
      SizeY = 200,
      Theme = "Light"
+})
+
+UI.Banner({ -- put this inside anything to give it a description
+    Text = "This is some information!"
 })
 
 Multiple Game Support: -- lets you run a script on several different games on one loadstring
