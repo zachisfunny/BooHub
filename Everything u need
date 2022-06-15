@@ -41,7 +41,7 @@ Page.Slider({ -- is a slider
 })
 
 Dropdown:
-Page.Dropdown({ -- gives several options to pick from
+Page.Dropdown({ -- gives several options to pick from, the dropdowns are tricky, so if you want to use it, use something like this: "if (value == "a") then"
     Text = "Choose an option",
     Callback = function(value)
         print(value)
