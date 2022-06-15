@@ -1,4 +1,4 @@
--- Made by zach.#6257 BOO HUB ON TOP
+-- BOO HUB ON TOP
 local Player = game:GetService("Players").LocalPlayer
 local Mouse = Player:GetMouse()
 
