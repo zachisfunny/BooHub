@@ -122,9 +122,10 @@ elseif game.PlaceId == Game ID here then
    
    -- If you already have an elseif, do an if, then do elseif, this repeats itself
 Anti-AFK:
-wait(3)
-local VirtualUser=game:service'VirtualUser'
-game:service('Players').LocalPlayer.Idled:connect(function()
-VirtualUser:CaptureController()
-VirtualUser:ClickButton2(Vector2.new())
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
+
