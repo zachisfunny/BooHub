@@ -116,7 +116,7 @@ UI.Banner({ -- put this inside anything to give it a description
     }
 
 Multiple Game Support: -- lets you run a script on several different games on one loadstring
-elseif game.PlaceId == Game ID here then
+if game.PlaceId == Game ID here then
    local PlaceId = game.PlaceId
    
    -- If you already have an elseif, do an if, then do elseif, this repeats itself
