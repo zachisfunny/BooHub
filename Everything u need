@@ -199,3 +199,12 @@ end)
 wait()
 end
 end)
+
+Notification:
+wait(1) -- in the () is how long u want it to wait before it pups up, in seconds
+game.StarterGui:SetCore("SendNotification", {
+Title = "this is how"; -- the title (ofc)
+Text = "to make a notification"; -- what the text says (ofc)
+Icon = "rbxassetid://57254792"; -- change the image id to what u want if u want an image, if not, delete this row.
+Duration = 5; -- how long the notification show should in secounds
+})
