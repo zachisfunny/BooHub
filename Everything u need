@@ -133,21 +133,8 @@ local FlyingKey = Enum.KeyCode.B
 loadstring(game:HttpGet('https://raw.githubusercontent.com/zachisfunny/Fly-Script/main/Script'))()
 
 NoClip:
-        noclip = false
-        game:GetService('RunService').Stepped:connect(function()
-        if noclip then
-        game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-        end
-        end)
-        plr = game.Players.LocalPlayer
-        mouse = plr:GetMouse()
-        mouse.KeyDown:connect(function(key)
-         
-        if key == "e" then
-        noclip = not noclip
-        game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-        end
-        end)
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.Torso.CanCollide = false
 
 Basic ESP:
         local esp_settings = { ---- table for esp settings 
