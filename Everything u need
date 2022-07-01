@@ -114,6 +114,11 @@ UI.Banner({ -- put this inside anything to give it a description
             })
         end
     }
+    
+    Loadstring:
+loadstring(game:HttpGet((''),true))()
+
+-- put your raw link in the ('link in here')
 
 Multiple Game Support: -- lets you run a script on several different games on one loadstring
 if game.PlaceId == Game ID here then
