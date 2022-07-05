@@ -12,6 +12,11 @@ local Page = UI.New({
     Title = "Main"
 })
 
+
+local Page = UI.New({
+    Title = "Main"
+})
+
 local Page2 = UI.New({
     Title = "New Page"
 })
