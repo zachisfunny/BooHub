@@ -115,17 +115,14 @@ UI.Banner({ -- put this inside anything to give it a description
         end
     }
     
-    Loadstring:
-loadstring(game:HttpGet((''),true))()
-
--- put your raw link in the ('link in here')
+-- Others:
 
 Multiple Game Support: -- lets you run a script on several different games on one loadstring
-if game.PlaceId == Game ID here then
-   local PlaceId = game.PlaceId
-   
-   -- If you already have an elseif, do an if, then do elseif, this repeats itself
-Anti-AFK:
+if game.PlaceId == GameIdHere then
+   --script or loadstring here
+   end
+
+--Anti-AFK:
 wait(3)
 local VirtualUser=game:service'VirtualUser'
 game:service('Players').LocalPlayer.Idled:connect(function()
@@ -133,16 +130,16 @@ VirtualUser:CaptureController()
 VirtualUser:ClickButton2(Vector2.new())
 end)
 
-Fly:
+--Fly:
 local FlyingKey = Enum.KeyCode.B
 loadstring(game:HttpGet('https://raw.githubusercontent.com/zachisfunny/Fly-Script/main/Script'))()
 
-NoClip:
+--NoClip:
 game:GetService('RunService').Stepped:connect(function()
 game.Players.LocalPlayer.Character.Head.CanCollide = false
 game.Players.LocalPlayer.Character.Torso.CanCollide = false
 
-Basic ESP:
+--Basic ESP:
         local esp_settings = { ---- table for esp settings 
         textsize = 10,
         colour = 0,255,255
@@ -172,14 +169,14 @@ Basic ESP:
     
     game:GetService("RunService").RenderStepped:Connect(function() ---- loops faster than a while loop :)
         for i,v in pairs (game:GetService("Players"):GetPlayers()) do
-            if v ~= game:GetService("Players").LocalPlayer and v.Character.Head:FindFirstChild("Zachs ESP")==nil  then -- craeting checks for team check, local player etc
+            if v ~= game:GetService("Players").LocalPlayer and v.Character.Head:FindFirstChild("Zachs ESP")==nil  then
                 esp.Text = "["..v.Name.."]"
                 gui:Clone().Parent = v.Character.Head
         end
     end
     end)
 
-Infinite Jump:
+--Infinite Jump:
         getgenv().inf = value -- this value is what you see then it says Callback = function(value), that value is basically an on and off script made for you
         spawn(function()
             while inf == true do
@@ -193,7 +190,7 @@ wait()
 end
 end)
 
-Notification:
+--Notification:
 wait(1) -- in the () is how long u want it to wait before it pups up, in seconds
 game.StarterGui:SetCore("SendNotification", {
 Title = "this is how"; -- the title (ofc)
@@ -202,7 +199,7 @@ Icon = "rbxassetid://57254792"; -- change the image id to what u want if u want 
 Duration = 5; -- how long the notification show should in secounds
 })
 
-Smoothly float to a location / Tween:
+--Smoothly float to a location / Tween:
 	local New_CFrame = CFrame.new(the cframe)
 
 
@@ -215,3 +212,9 @@ Smoothly float to a location / Tween:
 	local tp = {CFrame = New_CFrame}
 
 	ts:Create(part, ti, tp):Play()
+
+--Chat Logger:
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/zachisfunny/Chat-Logger-For-Roblox/main/Script'),true))()
+
+--Attach to back script:
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/zachisfunny/Attach-to-back-Script/main/Script'),true))()
